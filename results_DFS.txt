@@ -1,0 +1,182 @@
+=== DFS BATCH TEST RESULTS === 
+ 
+-------------------------------------------------- 
+Map File: maps\testcase01.txt 
+maps\testcase01.txt DFS
+5 5
+1-2-5
+ 
+-------------------------------------------------- 
+Map File: maps\testcase02.txt 
+maps\testcase02.txt DFS
+6 7
+1-2-3-6
+ 
+-------------------------------------------------- 
+Map File: maps\testcase03.txt 
+maps\testcase03.txt DFS
+5 8
+1-2-3-4-5
+ 
+-------------------------------------------------- 
+Map File: maps\testcase04.txt 
+maps\testcase04.txt DFS
+5 7
+1-2-3-4-5
+ 
+-------------------------------------------------- 
+Map File: maps\testcase05.txt 
+maps\testcase05.txt DFS
+4 7
+1-2-8-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase06.txt 
+maps\testcase06.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase07.txt 
+maps\testcase07.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase08.txt 
+maps\testcase08.txt DFS
+4 8
+1-2-3-9-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase09.txt 
+maps\testcase09.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase10.txt 
+maps\testcase10.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase11.txt 
+maps\testcase11.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase12.txt 
+maps\testcase12.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase13.txt 
+maps\testcase13.txt DFS
+5 7
+1-2-3-4-5
+ 
+-------------------------------------------------- 
+Map File: maps\testcase14.txt 
+maps\testcase14.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase15.txt 
+maps\testcase15.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase16.txt 
+maps\testcase16.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase17.txt 
+maps\testcase17.txt DFS
+5 7
+1-2-3-4-5
+ 
+-------------------------------------------------- 
+Map File: maps\testcase18.txt 
+maps\testcase18.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase19.txt 
+maps\testcase19.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase20.txt 
+maps\testcase20.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase21.txt 
+maps\testcase21.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase22.txt 
+maps\testcase22.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase23.txt 
+maps\testcase23.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase24.txt 
+maps\testcase24.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase25.txt 
+maps\testcase25.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase26.txt 
+maps\testcase26.txt DFS
+4 7
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase27.txt 
+maps\testcase27.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase28.txt 
+maps\testcase28.txt DFS
+4 7
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase29.txt 
+maps\testcase29.txt DFS
+4 6
+1-2-3-4
+ 
+-------------------------------------------------- 
+Map File: maps\testcase30.txt 
+maps\testcase30.txt DFS
+4 7
+1-2-3-4
+ 

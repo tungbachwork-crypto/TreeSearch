@@ -16,6 +16,7 @@ def main():
     graph = map_data["graph"]
     start_node = map_data["start"]
     goal_nodes = map_data["goals"] 
+    coords = map_data["coords"]
 
     result = ""
 
@@ -32,7 +33,7 @@ def main():
     elif method == "CUS1":
         result = algorithms.cus1(start_node, goal_nodes, graph)
     elif method == "CUS2":
-        result = algorithms.cus2(start_node, goal_nodes, graph)
+        result = algorithms.cus2(start_node, goal_nodes, graph, coords)
     else:
         print(f"Unknown method: {method}")
         sys.exit(1)

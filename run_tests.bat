@@ -31,7 +31,7 @@ for %%f in (maps\*.txt) do (
     echo Map File: %%f >> %OUTPUT_FILE%
     
     :: Execute the Python script with the user's chosen method
-    python search.py "%%f" %METHOD% >> %OUTPUT_FILE%
+    python search.py "%%f" %METHOD% >> %OUTPUT_FILE% 2>&1
     
     :: Add a blank line for readability
     echo. >> %OUTPUT_FILE%

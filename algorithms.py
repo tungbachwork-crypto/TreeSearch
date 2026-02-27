@@ -22,9 +22,9 @@ def dfs(start_node, goal_nodes, graph):
     while frontier:
         current_node, path = frontier.pop()
 
-        if current_node in goal_nodes:
-            path_string = "-".join(path)
-            return f"{current_node} {nodes_created}\n{path_string}"
+        if str(current_node) in goal_nodes:
+            path_string = " ".join(map(str, path))
+            return f"goal {current_node} {nodes_created}\n{path_string}"
 
         if current_node not in explored:
             explored.add(current_node)
@@ -64,13 +64,13 @@ def bfs(start_node, goal_nodes, graph):
     while frontier:
         current_node, path = frontier.popleft()
 
-        if current_node in goal_nodes:
-            path_string = "-".join(path)
-            return f"{current_node} {nodes_created}\n{path_string}"
+    if str(current_node) in goal_nodes: # Đảm bảo ép kiểu chuỗi
+            # Sửa dấu "-" thành dấu cách và thêm chữ "goal"
+            path_string = " ".join(map(str, path))
+            return f"goal {current_node} {nodes_created}\n{path_string}"
         
-        if current_node not in explored:
+    if current_node not in explored:
             explored.add(current_node)
-
             neighbors_dict = graph.get(current_node, {})
             neighbor_ids = list(neighbors_dict.keys())
 
@@ -129,13 +129,13 @@ def cus1(start_node, goal_nodes, graph):
                 
 
     return "No path found"
-def cus2(start_node, goal_node, graph, coords): #Hill-Climbing
+def cus2(start_node, goal_nodes, graph, coords): # Hill-Climbing
     def euclidean(a, b):
         return math.sqrt((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2)
 
-
     def heuristic(node, goals, coords):
-        return min(euclidean(coords[node], coords[g]) for g in goals)
+        if node not in coords: return float('inf')
+        return min(euclidean(coords[node], coords[g]) for g in goals if g in coords)
 
     def reconstruct_path(parent, goal):
         path = []
@@ -148,43 +148,44 @@ def cus2(start_node, goal_node, graph, coords): #Hill-Climbing
     current = start_node
     parent = {start_node: None}
     visited = set([start_node])
-    created_nodes = 1  # count origin
+    created_nodes = 1
 
     while True:
-        #  Goal test
-        if current in goal_node:
+        # Goal test
+        if str(current) in goal_nodes:
             path = reconstruct_path(parent, current)
-            return current, created_nodes, path
+            path_str = " ".join(map(str, path))
+            return f"goal {current} {created_nodes}\n{path_str}"
 
         neighbors_dict = graph.get(current, {})
-        neighbors = list(neighbors_dict.items())  # [(neighbor, cost)]
+        neighbors = list(neighbors_dict.keys()) 
 
-        neighbors.sort(key=lambda x: int(x[0]))
+      
+        neighbors.sort(key=lambda x: int(x))
 
-        current_h = heuristic(current, goal_node, coords)
+        current_h = heuristic(current, goal_nodes, coords)
 
         best_neighbor = None
         best_h = current_h
 
-        for neighbor, cost in neighbors:
+      
+        for neighbor in neighbors:
             if neighbor in visited:
                 continue
 
-        created_nodes += 1
-        h = heuristic(neighbor, goal_node, coords)
+            created_nodes += 1
+            h = heuristic(neighbor, goal_nodes, coords)
 
-            # classic hill climbing (strict improvement)
-        if h < best_h:
-            best_h = h
-            best_neighbor = neighbor
+            # strict improvement 
+            if h < best_h:
+                best_h = h
+                best_neighbor = neighbor
 
-        #  Local minimum → failure
+        # Local minimum → failure
         if best_neighbor is None:
-            return None, created_nodes, []
+            return "No path found"
 
         parent[best_neighbor] = current
         visited.add(best_neighbor)
         current = best_neighbor
- return
-
 

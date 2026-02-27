@@ -10,26 +10,26 @@ def main():
     filename = sys.argv[1]
     method = sys.argv[2].upper()
 
-    graph = map_loader.read_map(filename)
+    map_data = map_loader.read_map(filename)
     
-    # Dummy start and goal nodes for now since we aren't parsing the map yet
-    start_node = None
-    goal_node = None
+    graph = map_data["graph"]
+    start_node = map_data["start"]
+    goal_nodes = map_data["goals"] 
 
     result = ""
 
     if method == "DFS":
-        result = algorithms.dfs(start_node, goal_node, graph)
+        result = algorithms.dfs(start_node, goal_nodes, graph)
     elif method == "BFS":
-        result = algorithms.bfs(start_node, goal_node, graph)
+        result = algorithms.bfs(start_node, goal_nodes, graph)
     elif method == "GBFS":
-        result = algorithms.gbfs(start_node, goal_node, graph)
+        result = algorithms.gbfs(start_node, goal_nodes, graph)
     elif method == "AS":
-        result = algorithms.a_star(start_node, goal_node, graph)
+        result = algorithms.a_star(start_node, goal_nodes, graph)
     elif method == "CUS1":
-        result = algorithms.cus1(start_node, goal_node, graph)
+        result = algorithms.cus1(start_node, goal_nodes, graph)
     elif method == "CUS2":
-        result = algorithms.cus2(start_node, goal_node, graph)
+        result = algorithms.cus2(start_node, goal_nodes, graph)
     else:
         print(f"Unknown method: {method}")
         sys.exit(1)

@@ -64,8 +64,7 @@ def bfs(start_node, goal_nodes, graph):
     while frontier:
         current_node, path = frontier.popleft()
 
-    if str(current_node) in goal_nodes: # Đảm bảo ép kiểu chuỗi
-            # Sửa dấu "-" thành dấu cách và thêm chữ "goal"
+    if str(current_node) in goal_nodes:
             path_string = " ".join(map(str, path))
             return f"goal {current_node} {nodes_created}\n{path_string}"
         
